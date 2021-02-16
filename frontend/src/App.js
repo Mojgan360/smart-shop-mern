@@ -1,7 +1,15 @@
 import './App.css'
+import { Container } from 'react-bootstrap'
+import Header from './components/Header'
 
 function App() {
-  return <div>hi</div>
+  return (
+    <div>
+      <Container>
+        <Header />
+      </Container>
+    </div>
+  )
 }
 
 export default App
