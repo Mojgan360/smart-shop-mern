@@ -1,7 +1,8 @@
 import './App.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
-import { Header, HomeScreen, SingleProduct } from './components'
+import { Header } from './components'
+import { HomeScreen, SingleProduct } from './pages'
 
 function App() {
   return (
