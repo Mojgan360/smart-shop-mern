@@ -20,10 +20,10 @@ const Rating = ({ stars, review, color }) => {
     )
   })
   return (
-    <strong className='mb-5'>
+    <div className='rating'>
       {tempStars}
-      <span className='m-2'>{review} </span>
-    </strong>
+      <h6>{review} </h6>
+    </div>
   )
   // return (
   //   <div>

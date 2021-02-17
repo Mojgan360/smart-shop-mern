@@ -1,5 +1,5 @@
 import './App.css'
-import { Container, Col, Row } from 'react-bootstrap'
+import { Container } from 'react-bootstrap'
 import { Header, HomeScreen } from './components'
 
 function App() {
