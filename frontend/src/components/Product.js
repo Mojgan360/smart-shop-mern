@@ -11,15 +11,11 @@ const Product = ({ product }) => {
         </a>
         <Card.Body>
           <a href={`/products/${Product._id}`}>
-            {' '}
             <Card.Title as='div'>
               <strong>{product.name}</strong>
             </Card.Title>
           </a>
           <Card.Text as='div'>
-            {/* <div className='my-3'>
-              {product.rating} from {product.numReviews}
-            </div> */}
             <Rating
               stars={product.rating}
               review={`${product.numReviews} reviews`}

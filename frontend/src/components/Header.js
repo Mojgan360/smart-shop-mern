@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <Navbar bg='dark' varient='dark' expand='lg' collapseOnSelect>
-        <Container>
+        <Container fluid>
           <Navbar.Brand href='/'>Smart Shop</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
