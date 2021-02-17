@@ -91,9 +91,9 @@ const Rating = ({ stars, review, color }) => {
 Rating.defaultProps = {
   color: '#E7E247',
 }
-Rating.propTypes = {
-  stars: PropTypes.number.isRequired,
-  review: PropTypes.string.isRequired,
-  color: PropTypes.string,
-}
+// Rating.propTypes = {
+//   stars: PropTypes.number.isRequired,
+//   review: PropTypes.string.isRequired,
+//   color: PropTypes.string,
+// }
 export default Rating
