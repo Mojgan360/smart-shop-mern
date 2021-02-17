@@ -3,14 +3,15 @@ import { Card } from 'react-bootstrap'
 import Rating from './Rating'
 
 const Product = ({ product }) => {
+  console.log(product._id)
   return (
     <div>
       <Card className='my-3 p-3 rounded'>
-        <a href={`/products/${Product._id}`}>
+        <a href={`/products/${product._id}`}>
           <Card.Img variant='top' src={product.image} />
         </a>
         <Card.Body>
-          <a href={`/products/${Product._id}`}>
+          <a href={`/products/${product._id}`}>
             <Card.Title as='div'>
               <strong>{product.name}</strong>
             </Card.Title>

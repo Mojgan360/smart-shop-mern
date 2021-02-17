@@ -1,4 +1,5 @@
 import Header from './Header'
 import HomeScreen from './HomeScreen'
+import SingleProduct from './SingleProduct'
 
-export { Header, HomeScreen }
+export { Header, HomeScreen, SingleProduct }
