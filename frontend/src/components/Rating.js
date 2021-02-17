@@ -1,11 +1,13 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Rating = ({ stars, review }) => {
+const Rating = ({ stars, review, color }) => {
   const tempStars = Array.from({ length: 5 }, (_, index) => {
     const number = index + 0.5
     return (
       <span key={index}>
         <i
+          style={{ color }}
           className={
             stars >= index + 1
               ? 'fas fa-star'
@@ -18,17 +20,17 @@ const Rating = ({ stars, review }) => {
     )
   })
   return (
-    <div>
-      <div className='stars'>{tempStars}</div>
-      <p className='reviews'>({review} customer reviews)</p>
-    </div>
+    <strong className='mb-5'>
+      {tempStars}
+      <span className='m-2'>{review} </span>
+    </strong>
   )
   // return (
   //   <div>
   //     <span>
   //       <i
   //         className={
-  //           value >= 1
+  //           stars >= 1
   //             ? 'fas fa-star'
   //             : value >= 0.5
   //             ? 'fas fa-star-half-alt'
@@ -39,7 +41,7 @@ const Rating = ({ stars, review }) => {
   //     <span>
   //       <i
   //         className={
-  //           value >= 2
+  //           stars >= 2
   //             ? 'fas fa-star'
   //             : value >= 1.5
   //             ? 'fas fa-star-half-alt'
@@ -50,7 +52,7 @@ const Rating = ({ stars, review }) => {
   //     <span>
   //       <i
   //         className={
-  //           value >= 3
+  //           stars >= 3
   //             ? 'fas fa-star'
   //             : value >= 2.5
   //             ? 'fas fa-star-half-alt'
@@ -61,7 +63,7 @@ const Rating = ({ stars, review }) => {
   //     <span>
   //       <i
   //         className={
-  //           value >= 4
+  //           stars >= 4
   //             ? 'fas fa-star'
   //             : value >= 3.5
   //             ? 'fas fa-star-half-alt'
@@ -72,7 +74,7 @@ const Rating = ({ stars, review }) => {
   //     <span>
   //       <i
   //         className={
-  //           value >= 5
+  //           stars >= 5
   //             ? 'fas fa-star'
   //             : value >= 4.5
   //             ? 'fas fa-star-half-alt'
@@ -80,8 +82,18 @@ const Rating = ({ stars, review }) => {
   //         }
   //       ></i>
   //     </span>
+  // <span>{text && text}</span>
+
   //   </div>
   // )
 }
 
+Rating.defaultProps = {
+  color: '#E7E247',
+}
+Rating.propTypes = {
+  stars: PropTypes.number.isRequired,
+  review: PropTypes.string.isRequired,
+  color: PropTypes.string,
+}
 export default Rating
