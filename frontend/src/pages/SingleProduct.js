@@ -5,16 +5,16 @@ import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
 import axios from 'axios'
 
 const SingleProduct = ({ match }) => {
-  console.log(match.params.id)
   const [product, setProduct] = useState({})
-
+  console.log(match.params.id)
   useEffect(() => {
     const fechProduct = async () => {
       const { data } = await axios.get(`/api/products/${match.params.id}`)
+      console.log(data)
       setProduct(data)
     }
     fechProduct()
-  }, [])
+  }, [match])
   return (
     <div>
       <Link to='/' className='btn btn-light my-3'>
